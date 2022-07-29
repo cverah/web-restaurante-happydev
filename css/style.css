@@ -1,0 +1,403 @@
+*{
+   box-sizing: border-box; /* importante para que el comportamiento de los bloques sea como una caja osea que respete su ancho y no se sobrepase */
+}
+body{
+    font-family: "Asap";
+    color: #06283D;
+}
+
+a{
+    display: inline-block; /* es mejor usar inline-block en vez de block */
+    /* importante con diplay: inline no funciona las transformaciones */
+}
+
+section{
+    position: relative;
+}
+
+/* clases */
+.container{
+    /* abarcara el contenido de nuestra web */
+    width: 1180px;
+    padding: 0 15px; /* espacio interno arriba abajo 0 izquierda y derecha 15px */
+    margin: 0 auto; /* para que se ponga al medio */
+}
+
+/* para que abarque todo el ancho de la pantalla */
+
+.container-full{
+    width: 100%;
+    padding: 0 15px; /* espacio interno arriba y abajo 0 izquierda y derecha 15px */
+}
+
+.cabecera{
+    background-color: #293462;
+    position: sticky; /* mantiene la imagen fija pero respeta su ancho al comienzo luego al bajar mantiene su espacio */
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999; /* numero de posicion del elemento el cual se pone un numero mayor */
+}
+
+.cabecera .container{
+    /* cabecera container es el padre del elemento id logo y class menu entonces aqui se hace le display flex para que se aproveche todo el anncho de la pantalla */
+    display: flex; /* flex para aprovechar todo el ancho de la pantalla */ 
+    align-items: center; /* elemento alnieado al centro en eje y base a la altura del mayor elemento */
+    /* justify-content: flex-start; /* para alineacion de elemento en base al eje x este se alinea a la izquierda */
+    /* justify-content: flex-end; para alineacion de elemento en base al eje x este se alinea a la derecha */
+    /* justify-content: center; para alineacion de elemento en base al eje x este se alinea en el centro */
+    /* justify-content: space-around; para alineacion de elemento en base al eje x este igual el mismo espacio del elemento de la derecha e izquierda de cada elemento en este caso de los 02 elemento id logo y class menu */
+    justify-content: space-between; /* para alineacion de elemento en base al eje x este hace que un elemento se vaya a la izquierda id logo y el otro a la derecha class menu  y asi con los demas*/
+    /* justify-content: space-evenly; para alineacion de elemento en base al eje x este hace que todos los elementos esten separados con el mismo espacios entre los elementos */
+
+}
+.cabecera #link-logo{
+  
+}
+
+.cabecera .menu{
+    /* position: fixed; /* posicion fija 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: #1F4690;
+    justify-content: center;  centro eje x de la propiedad display flex;
+    align-items: center; centro eje y de la propiedad display flex; 
+    flex-direction: column; /* para q el div este modo columna uno debajo deotro si se desea fila es row 
+ */
+  
+}
+
+/* a todas las etiquetas a que esten dentro de nav */
+.cabecera .menu a{
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    color: #FF9F29;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* espacio entre letra a letra */
+    word-spacing: 5px; /* espacio de palabra en palabra */
+}
+
+.cabecera .hamb{
+    color: #FF9F29;
+    font-size: 40px;
+    display: none;
+}
+
+
+/* para la fila*/
+.fila{
+    /* fila es el padre de los elemento que abarca a las clases columanas para que pueda aprovechar toda la pantalla y para responsive se tiene que poner al elemento padre el display: flex */
+    margin-left: -15px; /* para q este alineado con el logo retrocede el texto */
+    margin-right: -15px;
+    display: flex;
+    align-items: stretch; /* alinea los items en este caso las columnas, las columnas tienen el mismo alto basandose en la columna con mayor alto la columna con mayor alto predomina */
+    /* align-items: center; alinea en el centro pero conserva cada item conserva su tamaño de su mismo ancho */
+    /* align-items: flex-start; alinea en la parte superior pero conserva cada item conserva su tamaño de su mismo ancho  */
+    /* align-items: flex-end; alinea en la parte inferio pero conserva cada item conserva su tamaño de su mismo ancho */
+    flex-wrap: wrap; /* como flex siempre va ocuapr todo el ancho de la pantalla por ende van a quedar en la misma linea pero para que los elementos no se apachurren y cunado este lleno los items se bajen hacia abajo */
+}
+
+.fila.fila-centrada{
+    justify-content: center;
+}
+
+/* para las columnas esto para las divisiones que tendra la web */
+.columna
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    /* se obvian por que el elemento de padre de columna que es fila tiene el display flex */
+    /* display: inline-block; /* cuando se pone display su comportamiento natural es que deja un espacio minimo entre ellos */ 
+    /* margin-left: -1px; /* quita ese espacio del comportamiento display dejando pegado a la izquierda */ 
+    /* margin-right: -1px; /* quita ese espacio del comportamiento display dejando pegado a la derecha * */
+   /*  vertical-align: top; /* pegado arriba en el div */
+}
+
+/* columna para tod el ancho de la pantalla */
+.columna-100{
+    width: 100%;
+}
+
+/* para 2 columnas 50% en el ancho de la pantalla */
+.columna-50{
+    width: 50%;
+}
+
+/* para 3 columnas 33.33% en el ancho de la pantalla */
+.columna-33{
+    width: 33.33%;
+}
+
+/* para 4 columnas 25% en el ancho de la pantalla */
+.columna-25{
+    width: 25%;
+}
+
+.seccion{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.justificar-texto{
+    text-align: justify;
+}
+
+.sin-padding{
+    padding: 0;
+}
+
+.contenedor-cuadrado{
+    width: 100%; /* abarque 100 del ancho */
+    padding-bottom: 100%; /* como el cuadro no tiene una altura fija se generamos la altura del elemento div con la propiedad padding bottom: 100% con este css ya reconoce el alto del bloque y estonces ya se puede adaptar el contenido al bloque este 100% diempre va guardar relacion con lo que se mencione en el ancho osea 100% entonces 100% ancho y 100% alto en cuadrado si queremos un rectangulo entonce seria ancho 100% width y 50% alto padding-bottom: ; */
+    position: relative; /* relative ocupa un espacio pero puede alberga otros bloques hijos como la position absolute */
+    overflow: hidden; /* //overflow significa desbordamiento osea si el contenido de adentro se desborda osea esta fuera de su bloque (fuera del bloque se hace con top:-100% o bottom -100%) entones los que hace es ocultar el bloque- es para efecto mas que todo- en este caso se realiza el top:-100 al .contenedor.cuadrado .contenido-cuadrado para que cuando pase el mouse muestre el texto que se ingreso */
+    background-color: #293462;
+    cursor: pointer; /* para el icono del mouse */
+}
+
+.contenedor-cuadrado.cont-rec{
+    
+    padding-bottom: 56.25%; /*para que el contenedor-cuadrado ahora sea de relacion 16:9 ose un rectangulo*/
+}
+
+.contenedor-cuadrado img{
+    position: absolute; /* este es el bloque hijo entonces con absolute se puede incrustar a un bloque padre de postion relative */
+    top: 0; /* pegado arriba para qeu abrque todo el cuadrado la imagen */
+    left: 0; /* pegado izquierda para qeu abrque todo el cuadrado la imagen */
+    width: 100%; /* para que la imagen abarque el ancho 100% */
+    height: 100%; /* para que la imagen ocupe todo el alto de la iamgen */
+   /*  object-fit: cover; /* para que no distorsione la imagen y cubrir la imagen tipo zoom en el cuadrado objet-fict se utiliza solo para imagen y cuadrado */
+    object-fit: fill; /* para que no distorsione la imagen y cubrir la imagen completa en el cuadrado objet-fict*/
+    object-position: center;/* para que la imagen se posicione en el centro */
+    opacity: 0.8;
+    filter: grayscale(1); /* para que la imagen este en blanco y negro */
+}
+
+.contenedor-cuadrado .contenido-cuadrado{
+    position: absolute;
+    width: 100%;
+    text-align: center; /* tambien sirve apara alinear elementos cunado se pone el div inline-blok o inline-flex */
+    padding-right: 30px;
+    padding-left: 30px;
+    top: -100%;
+}
+
+.contenedor-cuadrado .contenido-cuadrado h2{
+    margin-top: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+.importante{
+    font-style: italic;
+}
+
+.orden{
+    order: 2; /* propiedad de display flex modifica el orden de los div hijos en este caso empieza de 0 pero se le esta asignando 2 */
+}
+
+/* botones */
+.btn{
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 15px 30px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.btn.btn-transparente{ /* para clase que tenga btn-trasnparente y btn */
+    border-color:#FF9F29;
+    background-color: transparent;
+    color: #FF9F29;
+}
+
+.btn.btn-transparente:hover{ /* para clase que tenga btn-trasnparente y btn */
+    
+    background-color: white;
+  
+}
+
+.btn.btn-amarillo{ /* para clase que tenga btn-trasnparente y btn */
+    border-color:#FF9F29;
+    background-color: #f3d8b8;
+    color: #FF9F29;
+}
+
+.btn-circulo
+{
+    width: 40px;
+    height: 40px;
+    display: inline-flex; /* para que se acomode en el se alinea de aceuerdo al comportamiento del elemento padre si tiene el element padre el text-aling center entonces se alineara de acuento a esa propiedad */
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%; /* para que sea un circulo perfecto */
+    border-width: 2px;
+    border-style: solid;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.btn-circulo.circulo-blanco{
+    color: white;
+    border-color: white;
+    text-decoration: none;
+}
+
+.titulos{
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.margin-arriba{
+    margin-top: 35px;
+}
+
+.video-fondo{
+    position: absolute; /* si es abosluto el padre debe ser relativo para que se integre */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: fill;
+    object-position: center;
+    z-index: 1; /* position 1 */
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+/* ---id--- */
+#logo{
+    width: 100px;
+    height: auto;
+}
+
+#banner{
+    background-color: black;
+}
+
+#banner .banner-home{
+    width: 100%; /* para que abarque el 100% */
+    height: 700px;
+    display: block; /* para que no haya espacios cuando se soloque debajo actua como bloque */
+    opacity: 0.6; /* opaca la imagen 1 claro y 0 oscuro */
+}
+
+#banner .container{
+    position: absolute;
+    top: 25%; /* 5+40% ubica en la mitad de la pantalla de arriba hacia abajo  en este caso dentro del padre que es section de position relative conserva su ancho permitiendo mover a elementos de position: abolsute*/ 
+    left: 0; /* para que se ubique en su posicion que estaba */
+    right: 0; /* para que se ubique en la posicion que estaba en un inicio lo jala de ambos lados */
+}
+
+#banner .container h1{
+    font-size: 50px;
+    color: #FF9F29;
+    text-transform: uppercase;
+    margin: 0; /* todos los h por defecto tienen un margen se le agrega margen 0 para quitar ese margen y que este pegado; */
+    -webkit-text-stroke: 1px #fff; /* para que solo se vea el borde de la letra solo compatible con navegador chrome */
+}
+
+#banner .container p{
+    font-size: 25px;
+    color: #293462;
+    font-weight: bold;
+    line-height: 1.5; /* espaciado de alto del parrafo */
+    background-color: rgba(255, 253, 253, 0.4)
+}
+
+#lacarta{
+    /* background-image: url(../img/trama.jpg);poner fondo de imagen 
+    background-repeat: repeat-x; repite la imagen en el eje y no-repeat es no repetir
+    background-repeat: no-repeat;
+    background-position: center top; posicion de la imagem
+    background-size: cover;  cubre todo el bloque div contain: cubre solo el espacio de la imagen
+    background-attachment: fixed; para que la imagen quede en posicion fija */
+    background-color: #355764;
+    background-image: url(../img/trama.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+#lacarta .titulos{
+    color: #FF9F29;
+    text-shadow: 3px 0px 1px #f3ef25;
+}
+
+#carta-titulo{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#locales{
+
+}
+
+#locales ul{
+    padding-left: 0;
+    list-style-position: inside; /* outside fuera del ul - inside dentro del ul */
+    list-style-type: none; /* tipo de viñeta */
+    list-style-image: url(../img/lista.png);
+    line-height: 15px; /* espacios de lista por lista en vertical */
+    columns: 3; /* partee 3 columnas y lo pone 1lista en cada columna de forma horizontal */
+}
+
+#servicios .contenedor-serv{
+    background-color: #F7EC09;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    height: 100%; /* para que sea igual el mismo alto para todos el alto lo toma del ancho que genera padding bottom del mas alto en este caso del q tiene mas contenido */
+    box-shadow: 3px 3px 2px 2px #feb139; /* para dalr sombra al div en este caso al contenedro-serv 2px ejex 2 px eje y el siguiente el difuminado y el sigueinte el ancho que toma */
+}
+
+#servicios .contenedor-serv i{
+    font-size: 40px;
+}
+
+#testimonio{
+    position: relative; /* por q el video es posicion abolsuta cada vez que hay un div de position abosulta el padre debe ser relativo o absoluto */
+    background-color: #876445;
+    color: white;
+    line-height: 1.5; /* espacio de linea con linea de abajo del parrafo */
+}
+
+#testimonio p{
+    margin-bottom: 0;
+
+}
+
+#testimonio .container{
+    z-index: 3; /* posicion 3 */   
+    position: relative; /* para que ocupe un espacio dentro del video */
+}
+
+#testimonio .trama-video{
+    z-index: 2; /* posicion 2 */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #876445, rgba(255, 253, 253, 0.4)); /* para el degradado que ira de la derecha con colo marron combinando con el color gris  se pude poner mas colores*/
+    /* para degradado en imagen simepre y cunado no sea blanco y negro por q sino no se vera */
+    /* background-image: linear-gradient(to right, #876445, rgba(255, 253, 253, 0.4)), url(../img/plato1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; */
+}

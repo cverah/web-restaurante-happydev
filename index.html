@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Este en un restaurante unico en comidas exoticas"> <!-- para busquedas en google -->
+    <meta name="keywords" content="restaurante, comida peruana"> <!-- palabras clave para busqueda de google -->
+    <meta name="author" content="Cristhian Mario Vera Huamani"> <!-- para poner el autor de la pagina web -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Restaurante X - Bienvenidos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css"> <!-- para resetear los estilos sirve para compatibilidad con navegadores -->
+    <link rel="stylesheet" href="css/style.css">    
+    <script src="https://kit.fontawesome.com/31d3b1afdb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- cabecera -->
+    <header class="cabecera">
+        <!-- para todos el contenido este dentro de un bloque -->
+        <div class="container">
+            <!-- imagen logo -->
+            <a href="index.html" id="link-logo">
+                <img id="logo" src="img/logo.png" alt="logo">
+            </a>
+            <!-- para la etiquetas menu -->
+            <nav class="menu">
+                <a href="#lacarta">la carta</a>
+                <a href="#locales">locales</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contactos">contactos</a>
+            </nav>
+            <a href="#" class="hamb"><i class="fa-solid fa-bars"></i></a>
+        </div>          
+    </header>
+    <!-- contenido menu -->
+    <main>
+        <!-- secciones -->
+        <!-- banner -->
+        <section id="banner">          
+            <img class="banner-home" src="img/plato1.jpeg" alt="plato1">   
+            <div class="container">
+                <div class="fila">
+                    <div class="columna columna-50">
+                        <h1>Lee nuestra carta</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis maxime quas unde non iure illo dolore doloribus odit alias aspernatur nisi voluptas.</p>
+                        <a href="#lacarta" class="btn btn-transparente">Ver Carta</a>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <!-- 1ERA SECCION -->
+        <section id="lacarta" class="seccion">
+            <div class="container">
+                <div class="fila">
+                    <div class="columna columna-100">
+                        <h1 class="titulos">La Carta</h1>
+                    </div>
+                </div>
+                <div class="fila columna"> <!-- dos columnas   columna para que agregue 15 px hacia adentro en izquierda y derecha para que este alineado-->
+                    <!-- ponemos solo un cuadrado para una foto -->
+                    <div class="columna columna-50 sin-padding orden"> <!-- orden cambia el orden de las posiciones -->
+                        <div class="contenedor-cuadrado">
+                            <img src="img/plato2.jpg" alt="">
+                            <div class="contenido-cuadrado">
+                                <h1 id="carta-titulo">Plato Peruano</h1>
+                                <a href="#" class="btn btn-amarillo">Ver más</a>
+                            </div>                                
+                        </div>
+                    </div>
+                    <div class="columna columna-50"> <!-- aqui sin padding por que esta restando lo de class fila que esta hacia abajo -->
+                        <!-- ponemos 4 cuadrados para 4fotos siempre en fila -->
+                        <div class="fila"> <!-- en la segunda columan habra una fila con 4 columnas que con display flex se acomodara hacia abajo -->
+                           <!--  cuadrado para imagen 2 -->
+                            <div class="columna columna-50 sin-padding">
+                                <div class="contenedor-cuadrado">
+                                    <img src="img/plato3.jpeg" alt="">
+                                    <div class="contenido-cuadrado">
+                                        <h1 id="carta-titulo">Plato Italiano</h1>
+                                        <a href="#" class="btn btn-amarillo">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  cuadrado para imagen 3 -->
+                            <div class="columna columna-50 sin-padding">
+                                <div class="contenedor-cuadrado">
+                                    <img src="img/plato4.jpg" alt="">
+                                    <div class="contenido-cuadrado">
+                                        <h1 id="carta-titulo">Plato Frances</h1>
+                                        <a href="#" class="btn btn-amarillo">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  cuadrado para imagen 4 -->
+                            <div class="columna columna-50 sin-padding">
+                                <div class="contenedor-cuadrado">
+                                    <img src="img/plato5.jpeg" alt="">
+                                    <div class="contenido-cuadrado">
+                                        <h1 id="carta-titulo">Plato Holandes</h1>
+                                        <a href="#" class="btn btn-amarillo">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  cuadrado para imagen 5 -->
+                            <div class="columna columna-50 sin-padding">
+                                <div class="contenedor-cuadrado">
+                                    <img src="img/plato6.jpeg" alt="">
+                                    <div class="contenido-cuadrado">
+                                        <h1 id="carta-titulo">Plato Romano</h1>
+                                        <a href="#" class="btn btn-amarillo">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </section>
+        <section id="locales" class="seccion">
+            <div class="container-full">
+                <div class="fila fila-centrada">
+                    <div class="columna columna-50">
+                        <h1 class="titulos">Locales</h1>
+                        <p class="centrar-texto">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi vel voluptatibus fuga ducimus nobis qui voluptatem aliquam in laborum unde mollitia ut reiciendis, praesentium magnam tempore quasi iusto aperiam doloremque!
+                        </p>
+                        <ul>
+                            <li>Orden</li>
+                            <li>Limpieza</li>
+                            <li>Servicio al Cliente</li>
+                        </ul>
+                        <p class="centrar-texto">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, dicta? Quae et ipsam magnam repellat veniam adipisci obcaecati cum officia? Eligendi veritatis omnis libero facere dolorem odit molestias quia deleniti?
+                        </p>
+                    </div>
+                </div>
+                <div class="fila margin-arriba">
+                    <div class="columna columna-50 sin-padding">
+                        <div class="contenedor-cuadrado cont-rec">
+                            <img src="img/local01.jpeg" alt="local 01">
+                            <div class="contenido-cuadrado">
+                                <h2>Local 01</h2>
+                                <a href="#" class="btn-circulo circulo-blanco">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columna columna-50 sin-padding">
+                        <div class="contenedor-cuadrado cont-rec">
+                            <img src="img/local02.jpeg" alt="local 02">
+                            <div class="contenido-cuadrado">
+                                <h2>Local 02</h2>
+                                <a href="#" class="btn-circulo circulo-blanco">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columna columna-50 sin-padding">
+                        <div class="contenedor-cuadrado cont-rec">
+                            <img src="img/local03.jpeg" alt="local 03">
+                            <div class="contenido-cuadrado">
+                                <h2>Local 03</h2>
+                                <a href="#" class="btn-circulo circulo-blanco">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="columna columna-50 sin-padding">
+                        <div class="contenedor-cuadrado cont-rec">
+                            <img src="img/local04.jpeg" alt="local 04">
+                            <div class="contenido-cuadrado">
+                                <h2>Local 04</h2>
+                                <a href="#" class="btn-circulo circulo-blanco">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="servicios" class="seccion">
+            <div class="container">
+                <div class="fila fila-centrada">
+                    <div class="columna columna-50">
+                        <h1 class="titulos">Servicios</h1>
+                                        
+                    </div>
+                </div>
+                <div class="fila margin-arriba">
+                    <div class="columna columna-33">
+                        <div class="contenedor-serv">
+                            <i class="fa-solid fa-motorcycle"></i>>
+                            <h2>Delivery</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellendus atque voluptatum nostrum ducimus numquam, quos magnam ut inventore veniam qui voluptate, consequuntur ullam maxime recusandae impedit soluta, unde facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad soluta praesentium quidem odio molestias fuga minima facilis magnam, repellendus, illum sed! Quaerat aliquid architecto veniam qui impedit neque ad aliquam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut rerum facere tenetur enim quia molestiae iure veritatis corporis, rem, quos voluptate eveniet veniam omnis velit nesciunt suscipit ea sapiente eum!</p>
+                        </div>
+                    </div>
+                    <div class="columna columna-33">
+                        <div class="contenedor-serv">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <h2>Tarjeta de compra</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellendus atque voluptatum nostrum ducimus numquam, quos magnam ut inventore veniam qui voluptate, consequuntur ullam maxime recusa</p>
+                        </div>
+                    </div>
+                    <div class="columna columna-33">
+                        <div class="contenedor-serv">
+                            <i class="fa-solid fa-clock"></i>
+                            <h2>Reservas</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto repellendus atque voluptatum nostrum ducimus numquam, quos magnam ut inventore veniam qui voluptate, consequuntur ullam maxime recusandae impedit soluta, unde facere! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum numquam ut placeat sit ad dignissimos? Placeat error odit, consectetur alias pariatur, doloribus vitae nesciunt quo porro amet deleniti est nam?</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section id="testimonio" class="seccion">
+            <video class="video-fondo" src="video/video-cocina.mp4" muted loop autoplay></video>
+            <div class="trama-video"></div> <!-- para el degradado del video para el degradado del background en el video -->
+            <div class="container">
+                <div class="fila fila-centrada">
+                    <div class="columna columna-50">
+                        <h1 class="titulos">Testimonio</h1>
+                        <p class="centrar-texto inclinar-texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo optio explicabo quis nesciunt corrupti necessitatibus, animi, iste fugit neque sed ullam tempore similique autem quod a sit accusamus? Neque, tenetur?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- pie de pagina -->
+    <footer>
+       
+    </footer>
+</body>
+</html>
