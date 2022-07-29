@@ -289,13 +289,16 @@ section{
 
 #banner{
     background-color: black;
+    height: 100vh; /* 100% de lo que se visualiza */
 }
 
 #banner .banner-home{
     width: 100%; /* para que abarque el 100% */
-    height: 700px;
+    height: 100vh; /* 100% de lo que se visualiza */
     display: block; /* para que no haya espacios cuando se soloque debajo actua como bloque */
     opacity: 0.6; /* opaca la imagen 1 claro y 0 oscuro */
+    object-fit: fill; /* para que cubra todo */
+    object-position: center;
 }
 
 #banner .container{
@@ -400,4 +403,114 @@ section{
     background-position: center;
     background-size: cover;
     background-attachment: fixed; */
+}
+
+/* para responsive desig para que se adpte a otros dispositivos */
+
+/* tamaño de comptuadora o laptop */
+@media(min-width:1200px) /* //desde el tamaño 1200px */
+{
+    /* body{
+        background-color: green;
+    } */
+}
+
+/* tamaño de tablet en forma horizontal */
+@media(max-width:1199px){ /* hasta el tamaño 1199px */
+    /* body{
+        background-color: yellow;
+    } */
+}
+
+/* tamaño de tablet en forma vertical */
+@media(max-width:991px){ /* hasta el tamaño 991px */
+    /* body{
+        background-color: red;
+    } */
+}
+
+/* tamaño para dsipisitivo movil celulares */
+@media(max-width:767px){ /* hasta el tamaño 767px */
+    /* body{
+        background-color: blue;
+    } */
+    .container{
+        width: 100%;
+    }
+    .columna-mb-100{
+        width: 100%;
+        margin-bottom: 2px;
+    }
+
+    .orden{
+        order: 0;
+    }
+    
+    .titulos{
+        font-size: 55px;
+        margin:0;
+    }
+
+    /* para el menu para que salga la hamb */
+    .cabecera .menu{
+        position: fixed;/*  posicion fija  */
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        background-color: #1F4690;
+        justify-content: center;  centro eje x de la propiedad display flex;
+        align-items: center; centro eje y de la propiedad display flex; 
+        flex-direction: column; /* para q el div este modo columna uno debajo deotro si se desea fila es row  */
+        display: none; /*para que se oculte*/
+    }
+
+    .cabecera .hamb{
+        display: block; /* para que aparezca el icono de hamburguesa */
+    }    
+
+    #logo{
+        width: 55px;      
+    }
+
+
+    .seccion{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .margin-arriba{
+        margin-top: 10px;
+    }
+
+    #servicios .contenedor-serv{
+        box-shadow: none; 
+        height: auto;
+    }
+
+    #banner{
+        height: 75vh;
+    }
+    
+    #banner .banner-home{
+        height: 75vh; /* 100% de lo que se visualiza */
+    }
+
+    #banner .container{
+        top: 30%;
+    }
+    
+    #banner .container h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    #banner .container p{
+        font-size: 15px;
+    }
+
+    .btn.btn-transparente {
+        width: 100%;
+    }
 }
